@@ -11,15 +11,14 @@ public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@NotBlank(message = "Name required")
-	@Size(max = 100, message = "The name must contain a maximum of 100 characters.")
 	private String id;
 	
 	@NotBlank(message = "Name required")
 	@Size(max = 100, message = "The name must contain a maximum of 100 characters.")
 	private String name;
 	
-	@NotBlank(message = "Name required")
-	@Size(max = 100, message = "The name must contain a maximum of 100 characters.")
+	@NotBlank(message = "E-mail required")
+	@Size(max = 100, message = "The e-mail must contain a maximum of 100 characters.")
 	private String email;
 	
 	public UserDTO() {
@@ -53,5 +52,9 @@ public class UserDTO implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public User fromDTO(UserDTO objDto) {
+		return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
 	}
 }

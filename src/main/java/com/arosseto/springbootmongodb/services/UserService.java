@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.arosseto.springbootmongodb.domain.User;
+import com.arosseto.springbootmongodb.dto.UserDTO;
 import com.arosseto.springbootmongodb.repository.UserRepository;
 import com.arosseto.springbootmongodb.services.exception.ObjectNotFoundException;
 
@@ -23,5 +24,9 @@ public class UserService {
 	public User findById(String id) {
 		Optional<User> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException("No record found"));
+	}
+	
+	public User insert(User obj) {
+		return repo.insert(obj);
 	}
 }
