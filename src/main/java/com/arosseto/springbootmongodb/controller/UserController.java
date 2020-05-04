@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,10 +40,10 @@ public class UserController {
 		return ResponseEntity.ok().body(listDto);
 	}
 	
-	@ApiOperation(value="Find by user ID")
+	@ApiOperation(value="Find user by ID")
 	@GetMapping(value="/{id}")
-	public ResponseEntity<UserDTO> findById(@PathVariable("id") String Id) {
-		User obj = service.findById(Id);
+	public ResponseEntity<UserDTO> findById(@PathVariable("id") String id) {
+		User obj = service.findById(id);
 		return ResponseEntity.ok().body(new UserDTO(obj));
 	}
 	
@@ -56,5 +57,12 @@ public class UserController {
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		
 		return ResponseEntity.created(uri).build();
+	}
+	
+	@ApiOperation(value="Delete user by ID")
+	@DeleteMapping(value="/{id}")
+	public ResponseEntity<Void> delete(@PathVariable("id") String id) {
+		service.delete(id);
+		return ResponseEntity.noContent().build();
 	}
 }

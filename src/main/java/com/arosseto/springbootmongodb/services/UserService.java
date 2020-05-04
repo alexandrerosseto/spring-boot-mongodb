@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.arosseto.springbootmongodb.domain.User;
-import com.arosseto.springbootmongodb.dto.UserDTO;
 import com.arosseto.springbootmongodb.repository.UserRepository;
 import com.arosseto.springbootmongodb.services.exception.ObjectNotFoundException;
 
@@ -28,5 +27,10 @@ public class UserService {
 	
 	public User insert(User obj) {
 		return repo.insert(obj);
+	}
+	
+	public void delete(String id) {
+		findById(id);
+		repo.deleteById(id);
 	}
 }
