@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,5 +33,12 @@ public class UserController {
 		List<User> list = service.findAll();
 		List<UserDTO> listDto = list.stream().map(u -> new UserDTO(u)).collect(Collectors.toList()); 
 		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@ApiOperation(value="Find by user ID")
+	@GetMapping(value="/{id}")
+	public ResponseEntity<UserDTO> findById(@PathVariable("id") String Id) {
+		User obj = service.findById(Id);
+		return ResponseEntity.ok().body(new UserDTO(obj));
 	}
 }
