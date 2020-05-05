@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.arosseto.springbootmongodb.domain.Post;
 import com.arosseto.springbootmongodb.domain.User;
 import com.arosseto.springbootmongodb.dto.UserDTO;
 import com.arosseto.springbootmongodb.services.UserService;
@@ -75,5 +76,12 @@ public class UserController {
 		obj = service.update(obj);
 		
 		return ResponseEntity.noContent().build();
+	}
+	
+	@ApiOperation(value="Find user's posts using user ID")
+	@GetMapping(value="/{id}/posts")
+	public ResponseEntity<List<Post>> findPosts(@PathVariable("id") String id) {
+		User obj = service.findById(id);
+		return ResponseEntity.ok().body(obj.getPosts());
 	}
 }
