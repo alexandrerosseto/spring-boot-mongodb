@@ -36,9 +36,9 @@ public class PostController {
 	
 	@ApiOperation(value="Find a post based on a text")
 	@GetMapping(value="/titlesearch")
-	public ResponseEntity<List<Post>> findByTitle(@RequestParam(value="", defaultValue="") String text) {
-		text = URL.decodeParam(text);
-		List<Post> list = service.findByText(text);
+	public ResponseEntity<List<Post>> findByTitle(@RequestParam(value="", defaultValue="") String title) {
+		title = URL.decodeParam(title);
+		List<Post> list = service.findByTitle(title);
 		return ResponseEntity.ok().body(list);
 	}
 }
