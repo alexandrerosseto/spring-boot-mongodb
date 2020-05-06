@@ -5,12 +5,12 @@ import java.io.Serializable;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import com.arosseto.springbootmongodb.domain.User;
+import com.arosseto.springbootmongodb.model.User;
 
 public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	@NotBlank(message = "Name required")
+	@NotBlank(message = "Id required")
 	private String id;
 	
 	@NotBlank(message = "Name required")

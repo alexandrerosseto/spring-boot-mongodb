@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.arosseto.springbootmongodb.domain.User;
+import com.arosseto.springbootmongodb.model.User;
 import com.arosseto.springbootmongodb.repository.UserRepository;
 import com.arosseto.springbootmongodb.services.exception.ObjectNotFoundException;
 

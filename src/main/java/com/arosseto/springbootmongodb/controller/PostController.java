@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.arosseto.springbootmongodb.controller.util.URL;
-import com.arosseto.springbootmongodb.domain.Post;
+import com.arosseto.springbootmongodb.model.Post;
 import com.arosseto.springbootmongodb.services.PostService;
 
 import io.swagger.annotations.Api;
@@ -28,7 +28,7 @@ public class PostController {
 	@Autowired
 	private PostService service;
 	
-	@ApiOperation(value="Find a post based on user ID")
+	@ApiOperation(value="Find a post based on post ID")
 	@GetMapping(value="/{id}")
 	public ResponseEntity<Post> findById(@PathVariable("id") String id) {
 		Post obj = service.findById(id);

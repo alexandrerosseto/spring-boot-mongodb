@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.arosseto.springbootmongodb.domain.Post;
-import com.arosseto.springbootmongodb.domain.User;
 import com.arosseto.springbootmongodb.dto.AuthorDTO;
 import com.arosseto.springbootmongodb.dto.CommentDTO;
+import com.arosseto.springbootmongodb.model.Post;
+import com.arosseto.springbootmongodb.model.User;
 import com.arosseto.springbootmongodb.repository.PostRepository;
 import com.arosseto.springbootmongodb.repository.UserRepository;
 

@@ -1,4 +1,4 @@
-package com.arosseto.springbootmongodb.domain;
+package com.arosseto.springbootmongodb.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

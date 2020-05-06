@@ -2,7 +2,7 @@ package com.arosseto.springbootmongodb.dto;
 
 import java.io.Serializable;
 
-import com.arosseto.springbootmongodb.domain.User;
+import com.arosseto.springbootmongodb.model.User;
 
 public class AuthorDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
