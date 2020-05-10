@@ -2,6 +2,27 @@
 
 It is an API that registers Users who can be authors of posts or/and comments of posts.
 
+## Author
+
+* **Alexandre Antonio Lana Rosseto** - *Initial work* - [spring-boot-mongodb](https://github.com/alexandrerosseto/spring-boot-mongodb) - [LinkedIn](https://www.linkedin.com/in/alexandrerosseto)
+
+## License
+
+This project is free to use and it was designed for demonstration purposes.
+
+## Acknowledgments
+
+This project was designed to demonstrate the use of:
+
+* Use of Spring Boot libraries
+* Lambda applications
+* Knowledge of Exceptions hierarchy and inheritance
+* Application of custom exceptions
+* MVC with DTO standard
+* Use of NoSQL database - MongoDB
+* REGEX application
+* Dependency injection to address the impedance between the relational structure and the database
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -68,27 +89,4 @@ Note: Check on Run Configuration if JUnit 4 is selected.
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
-
-## Author
-
-* **Alexandre Antonio Lana Rosseto** - *Initial work* - [spring-boot-mongodb](https://github.com/alexandrerosseto/spring-boot-mongodb)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is free to use and it was designed for demonstration purposes.
-
-## Acknowledgments
-
-This project was designed to demonstrate the use of:
-
-* Use of Spring Boot libraries
-* Lambda applications
-* Knowledge of Exceptions hierarchy and inheritance
-* Application of custom exceptions
-* MVC with DTO standard
-* Use of NoSQL database - MongoDB
-* REGEX application
-* Dependency injection to address the impedance between the relational structure and the database
 
