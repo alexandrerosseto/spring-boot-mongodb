@@ -1,0 +1,8 @@
+spring: 
+  datasource:
+    data:
+    - mongodb.uri=mongodb://localhost:27017/sprintbootmongodb
+server:
+  port: 8080
+
+
