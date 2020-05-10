@@ -20,6 +20,7 @@ This project was designed to demonstrate the use of:
 * Application of custom exceptions
 * MVC with DTO standard
 * Use of NoSQL database - MongoDB
+* JUnit application
 * Dependency injection to address the impedance between the relational structure and the NoSQL database
 
 ## Getting Started
