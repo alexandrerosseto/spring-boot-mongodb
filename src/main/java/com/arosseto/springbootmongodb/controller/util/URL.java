@@ -7,6 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class URL {
 	
 	public static String decodeParam(String text) {
@@ -29,4 +31,15 @@ public class URL {
 			return defaultValue;
 		}
 	}
+	
+    /*
+     * converts a Java object into JSON representation
+     */
+    public static String asJsonString(final Object obj) {
+        try {
+            return new ObjectMapper().writeValueAsString(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

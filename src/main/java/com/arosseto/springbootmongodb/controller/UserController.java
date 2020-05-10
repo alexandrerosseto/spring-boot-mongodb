@@ -55,7 +55,7 @@ public class UserController {
 		User obj = objDto.fromDTO(objDto);
 		obj = service.insert(obj);
 		
-		/* Retorna a posição de memória do novo objeto criado*/
+		/* Return the memory position of a new created object */
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		
 		return ResponseEntity.created(uri).build();

@@ -25,6 +25,20 @@ public class UserService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException("No record found"));
 	}
 	
+	public Boolean exists(String id) {
+		try {
+			if (findById(id) != null) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		catch (ObjectNotFoundException e) {
+			return false;
+		}
+	}
+	
 	public User insert(User obj) {
 		return repo.insert(obj);
 	}
