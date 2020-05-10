@@ -1,6 +1,8 @@
 package com.arosseto.springbootmongodb.dto;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -56,5 +58,10 @@ public class UserDTO implements Serializable {
 	
 	public User fromDTO(UserDTO objDto) {
 		return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
+	}
+	
+	public List<UserDTO> toList(List<User> listObj) {
+		List<UserDTO> listDto = listObj.stream().map(u -> new UserDTO(u)).collect(Collectors.toList()); 
+		return listDto;
 	}
 }

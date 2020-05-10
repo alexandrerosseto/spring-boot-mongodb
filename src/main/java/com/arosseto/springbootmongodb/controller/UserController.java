@@ -2,7 +2,6 @@ package com.arosseto.springbootmongodb.controller;
 
 import java.net.URI;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,11 +33,12 @@ public class UserController {
 	@Autowired
 	private UserService service;
 
+	// Although the use of DTO would not be required, it was used for demonstration purpose only. A DTO could be well applied here if there was some sensitive data or for performance endings. 
 	@ApiOperation(value="Find all users from a list")
 	@GetMapping
 	public ResponseEntity<List<UserDTO>> findAll() {
 		List<User> list = service.findAll();
-		List<UserDTO> listDto = list.stream().map(u -> new UserDTO(u)).collect(Collectors.toList()); 
+		List<UserDTO> listDto = new UserDTO().toList(list);
 		return ResponseEntity.ok().body(listDto);
 	}
 	
