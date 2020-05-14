@@ -4,9 +4,9 @@ It is an API that registers Users who can be authors of posts or/and comments of
 
 ## Author
 
- **Alexandre Antonio Lana Rosseto** 
- * *Initial work* - [wbshopping](https://github.com/alexandrerosseto/wbshopping) 
-* [LinkedIn](https://www.linkedin.com/in/alexandrerosseto)
+**Alexandre Antonio Lana Rosseto** 
+* *Initial work* - [wbshopping](https://github.com/alexandrerosseto/wbshopping) 
+* My professional profile on [LinkedIn](https://www.linkedin.com/in/alexandrerosseto)
 
 ## License
 
