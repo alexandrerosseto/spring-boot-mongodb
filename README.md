@@ -4,18 +4,20 @@ It is an API that registers Users who can be authors of posts or/and comments of
 
 ## Author
 
-* **Alexandre Antonio Lana Rosseto** - *Initial work* - [spring-boot-mongodb](https://github.com/alexandrerosseto/spring-boot-mongodb) - [LinkedIn](https://www.linkedin.com/in/alexandrerosseto)
+ **Alexandre Antonio Lana Rosseto** 
+ * *Initial work* - [wbshopping](https://github.com/alexandrerosseto/wbshopping) 
+* [LinkedIn](https://www.linkedin.com/in/alexandrerosseto)
 
 ## License
 
 This project is free to use and it was designed for demonstration purposes.
 
-## Acknowledgments
+## Expectations
 
 This project was designed to demonstrate the use of:
 
 * Use of Spring Boot libraries
-* Lambda applications
+* Lambda expressions
 * Knowledge of Exceptions hierarchy and inheritance
 * Application of custom exceptions
 * MVC with DTO standard
